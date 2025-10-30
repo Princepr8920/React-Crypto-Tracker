@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow: auto;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+$default_radius: 25px !important ;
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+
+  #alert {
+    position: absolute;
+    top: 10px;
+    padding: 10px;
+    border-radius: $default_radius;
+  }
+
+  header {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    width: 100%;
+    height: 50px;
+    border-radius: $default_radius;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 5px;
+    margin-bottom: 10px;
+    div {
+      display: inherit;
+      align-items: inherit;
+      h3 {
+        margin: 0px;
+        padding: 0px;
+        display: inline;
+        vertical-align: middle;
+      }
+      svg {
+        height: 40px;
+        width: 40px;
+        margin-right: 5px;
+      }
+    }
+    button {
+      border: none;
+      outline: none;
+      background: rgba(2, 222, 2, 0.585);
+      border-radius: $default_radius;
+      margin: 0px 0px 0px 10px;
+      padding:0px 5px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: rgba(2, 222, 2, 0.827);
+    }
+  }
+
+  .App-content {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: $default_radius;
+    width: 100%;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    height: calc(100% - 50px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    margin: 0px;
+    li {
+      border-radius: $default_radius;
+      border: 0.2px solid rgba(109, 109, 109, 0.426);
+      display: flex;
+      flex: 1 1 200px;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px 10px;
+      margin: 5px;
+
+      .logo_name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        h5 {
+          margin: 0px 5px;
+          padding: 0px;
+          display: inline-block;
+        }
+      }
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+
+      .coin-info {
+        margin: 5px 0px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        padding: 5px;
+        hr {
+          height: 0.5px;
+          margin: 0px;
+          opacity: 0.4;
+        }
+        span {
+          margin: 3px;
+          font-size: 0.8rem;
+          display: inline-block;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+}
