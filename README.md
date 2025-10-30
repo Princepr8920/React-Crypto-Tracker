@@ -16,7 +16,7 @@ It performs the following tasks:
 
 ## Deployment Links
 - **Frontend:** [https://rct-prince.netlify.app](https://rct-prince.netlify.app)  
-- **Backend:** [https://react-crypto-tracker-p0ov.onrender.com](https://react-crypto-tracker-p0ov.onrender.com)
+- **Backend:** [https://react-crypto-tracker-p0ov.onrender.com](https://react-crypto-tracker-p0ov.onrender.com/api/coins)
 
 ### Sample Database Data
 ![Database Screenshot](https://ibb.co/d4xRxCyF)
