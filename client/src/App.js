@@ -68,8 +68,8 @@ function App() {
           id="alert"
           style={{
             background: alert.success
-              ? "rgba(12, 173, 12, 0.478)"
-              : "rgba(173, 12, 12, 0.478)",
+              ? "green"
+              : "red",
           }}
         >
           {alert.message}
