@@ -32,7 +32,7 @@ app.use(
         "https://fonts.gstatic.com",
       ],
 
-      connectSrc: ["'self'", "https://rct-prince.netlify.app/"],
+      connectSrc: ["'self'", "https://rct-prince.netlify.app"],
       objectSrc: ["'none'"],
     },
   })
