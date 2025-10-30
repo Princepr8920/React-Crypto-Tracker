@@ -6,7 +6,9 @@ import axios from "axios";
 
 function App() {
   let [alert, setAlert] = useState(null);
-  let response = useGetHookEffect("https://react-crypto-tracker-p0ov.onrender.com/api/coins");
+  let response = useGetHookEffect(
+    "https://react-crypto-tracker-p0ov.onrender.com/api/coins"
+  );
 
   useEffect(() => {
     let timeout = setTimeout(() => setAlert(null), 2000);
@@ -51,7 +53,10 @@ function App() {
         throw new Error("Something went wrong!");
       }
     } catch (err) {
-      setAlert({ message: err.response.data.message, success: false });
+      setAlert({
+        message: err?.response?.data?.message || "Something went wrong!",
+        success: false,
+      });
       console.error(err);
     }
   };
