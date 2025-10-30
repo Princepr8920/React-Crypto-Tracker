@@ -4,7 +4,7 @@
 React Crypto Tracker is a full-stack web application that tracks cryptocurrency prices and stores historical data for analysis.
 
 ## Tech Stack
-- **Frontend:** React  
+- **Frontend:** React,Scss  
 - **Backend:** Node.js, Express  
 - **Database:** MongoDB  
 
