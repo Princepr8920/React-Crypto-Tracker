@@ -3,7 +3,7 @@ require("./src/service/cronjob");
 const express = require("express"),
   appRoutes = require("./src/routes/appRoutes"),
   credentials = require("./src/middleware/credentials"),
-  corsOptions = require("../../../Strrings/helloexpress/src/config/corsOptions"),
+  corsOptions = require("./src/config/corsOptions"),
   cors = require("cors"),
   logger = require("morgan"),
   { connectToDatabase } = require("./src/loaders/mongodb"),
