@@ -5,6 +5,7 @@ const express = require("express"),
   credentials = require("./src/middleware/credentials"),
   corsOptions = require("./src/config/corsOptions"),
   cors = require("cors"),
+  helmet = require("helmet"),
   logger = require("morgan"),
   { connectToDatabase } = require("./src/loaders/mongodb"),
   http = require("http"),
@@ -13,6 +14,29 @@ const express = require("express"),
   server = http.createServer(app);
 
 connectToDatabase();
+
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://www.gstatic.com"],
+      styleSrc: [
+        "'self'",
+        "https://fonts.googleapis.com",
+        "https://cdnjs.cloudflare.com",
+      ],
+      fontSrc: [
+        "'self'",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+      ],
+
+      connectSrc: ["'self'", "https://rct-prince.netlify.app/"],
+      objectSrc: ["'none'"],
+    },
+  })
+);
 
 app.use(cors(corsOptions));
 app.use(express.json({ limit: "1mb" }));
