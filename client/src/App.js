@@ -6,7 +6,7 @@ import axios from "axios";
 
 function App() {
   let [alert, setAlert] = useState(null);
-  let response = useGetHookEffect("http://localhost:5000/api/coins");
+  let response = useGetHookEffect("https://react-crypto-tracker-p0ov.onrender.com/api/coins");
 
   useEffect(() => {
     let timeout = setTimeout(() => setAlert(null), 2000);
@@ -40,7 +40,7 @@ function App() {
         }
 
         const res = await axios.post(
-          "http://localhost:5000/api/history",
+          "https://react-crypto-tracker-p0ov.onrender.com/api/history",
           dataToSave
         );
 
